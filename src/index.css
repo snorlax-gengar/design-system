@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* GDS Brand Colors */
+  --gds-lavender-50: #FAF5FF;
+  --gds-lavender-100: #F3E8FF;
+  --gds-lavender-200: #E9D5FF;
+  --gds-lavender-300: #D8B4FE;
+  --gds-lavender-400: #C084FC;
+  --gds-lavender-500: #A855F7;
+  --gds-lavender-600: #9333EA;
+  --gds-lavender-700: #7E22CE;
+  --gds-lavender-800: #6B21A8;
+  --gds-lavender-900: #581C87;
+  --gds-lavender-brand: #A78BFA;
+  --gds-lavender-glow: #8B5CF6;
+
+  --gds-sky-50: #F0F9FF;
+  --gds-sky-100: #E0F2FE;
+  --gds-sky-200: #BAE6FD;
+  --gds-sky-300: #7DD3FC;
+  --gds-sky-400: #38BDF8;
+  --gds-sky-500: #0EA5E9;
+  --gds-sky-600: #0284C7;
+  --gds-sky-700: #0369A1;
+  --gds-sky-800: #075985;
+  --gds-sky-900: #0C4A6E;
+  --gds-sky-brand: #38BDF8;
+
+  --gds-butter-100: #FEF9C3;
+  --gds-butter-200: #FEF08A;
+  --gds-butter-400: #FACC15;
+  --gds-butter-500: #EAB308;
+  --gds-butter-brand: #FEF08A;
+
+  --gds-coral-100: #FFEDD5;
+  --gds-coral-200: #FED7AA;
+  --gds-coral-300: #FDBA74;
+  --gds-coral-400: #FB923C;
+  --gds-coral-500: #F97316;
+  --gds-coral-brand: #FB923C;
+
+  --gds-slate-50: #F8FAFC;
+  --gds-slate-100: #F1F5F9;
+  --gds-slate-200: #E2E8F0;
+  --gds-slate-300: #CBD5E1;
+  --gds-slate-500: #64748B;
+  --gds-slate-700: #334155;
+  --gds-slate-900: #0F172A;
+
+  /* Design Tokens: Spacing & Radius */
+  --gds-radius-sm: 6px;
+  --gds-radius-md: 10px;
+  --gds-radius-lg: 14px;
+  --gds-radius-xl: 20px;
+  --gds-radius-full: 9999px;
+
+  /* Typography Tokens: 기본값을 완전 무료 둥근 감성 서체(Gowun Dodum)로 설정 */
+  --gds-font-primary: 'Gowun Dodum', 'NanumSquareRound', Pretendard, sans-serif;
+  --gds-font-heading: 'Gowun Dodum', 'NanumSquareRound', sans-serif;
+}
+
+/* Dynamic Font Themes: 둥글둥글 완전 무료 폰트 테마 */
+html[data-font="gowun-dodum"] {
+  --gds-font-primary: 'Gowun Dodum', 'NanumSquareRound', Pretendard, sans-serif;
+  --gds-font-heading: 'Gowun Dodum', sans-serif;
+}
+
+html[data-font="nanum-round"] {
+  --gds-font-primary: 'NanumSquareRound', Pretendard, sans-serif;
+  --gds-font-heading: 'NanumSquareRound', sans-serif;
+}
+
+html[data-font="hybrid-gowun"] {
+  --gds-font-primary: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --gds-font-heading: 'Gowun Dodum', sans-serif;
+}
+
+html[data-font="pretendard"] {
+  --gds-font-primary: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --gds-font-heading: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+html[data-font="suit"] {
+  --gds-font-primary: 'SUIT Variable', SUIT, sans-serif;
+  --gds-font-heading: 'SUIT Variable', SUIT, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--gds-font-primary);
+}
+
+body {
+  font-family: var(--gds-font-primary);
+}
+
+h1, h2, h3, .font-heading {
+  font-family: var(--gds-font-heading);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

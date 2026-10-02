@@ -1,0 +1,244 @@
+/**
+ * Gengarileo Design System (GDS) - CSS Components (Family Edition)
+ * Primary: Mama Sky
+ * Secondary: Papa Lavender
+ * Accent: Baby Peach/Coral & Baby Butter
+ */
+
+@import url('./gds-tokens.css');
+
+/* ==========================================================================
+   BUTTON COMPONENT
+   ========================================================================== */
+
+.gds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--gds-font-sans);
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: all var(--gds-transition-fast);
+  outline: none;
+}
+
+.gds-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.45);
+}
+
+.gds-btn:disabled,
+.gds-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Button Sizes */
+.gds-btn-xs {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 12px;
+  border-radius: var(--gds-radius-sm);
+}
+
+.gds-btn-sm {
+  height: 36px;
+  padding: 0 14px;
+  font-size: 13px;
+  border-radius: var(--gds-radius-md);
+}
+
+.gds-btn-md {
+  height: 44px;
+  padding: 0 18px;
+  font-size: 15px;
+  border-radius: var(--gds-radius-md);
+}
+
+.gds-btn-lg {
+  height: 52px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: var(--gds-radius-lg);
+}
+
+.gds-btn-xl {
+  height: 60px;
+  padding: 0 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: var(--gds-radius-lg);
+}
+
+/* Button Variants: Solid Primary (Mama Sky) */
+.gds-btn-primary {
+  background-color: var(--gds-color-sky-400);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px -1px rgba(56, 189, 248, 0.4);
+}
+.gds-btn-primary:hover {
+  background-color: var(--gds-color-sky-500);
+  box-shadow: 0 4px 14px -1px rgba(56, 189, 248, 0.5);
+  transform: translateY(-1px);
+}
+.gds-btn-primary:active {
+  background-color: var(--gds-color-sky-600);
+  transform: translateY(0);
+}
+
+/* Button Variants: Solid Secondary (Papa Lavender) */
+.gds-btn-secondary {
+  background-color: var(--gds-color-lavender-500);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px -1px rgba(168, 85, 247, 0.4);
+}
+.gds-btn-secondary:hover {
+  background-color: var(--gds-color-lavender-600);
+  box-shadow: 0 4px 14px -1px rgba(168, 85, 247, 0.5);
+  transform: translateY(-1px);
+}
+.gds-btn-secondary:active {
+  background-color: var(--gds-color-lavender-700);
+  transform: translateY(0);
+}
+
+/* Button Variants: Accent (Baby Peach) */
+.gds-btn-accent {
+  background-color: var(--gds-color-coral-400);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px -1px rgba(251, 146, 60, 0.4);
+}
+.gds-btn-accent:hover {
+  background-color: var(--gds-color-coral-500);
+  box-shadow: 0 4px 14px -1px rgba(251, 146, 60, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Button Variants: Family Harmony Gradient (Mama Sky to Papa Lavender) */
+.gds-btn-family,
+.gds-btn-gradient {
+  background: linear-gradient(135deg, #38BDF8 0%, #A855F7 100%);
+  color: #FFFFFF;
+  box-shadow: var(--gds-shadow-family);
+}
+.gds-btn-family:hover,
+.gds-btn-gradient:hover {
+  opacity: 0.96;
+  box-shadow: 0 6px 20px -2px rgba(56, 189, 248, 0.4), 0 8px 24px -2px rgba(168, 85, 247, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Button Variants: Soft Tonal */
+.gds-btn-soft-sky {
+  background-color: var(--gds-color-sky-100);
+  color: var(--gds-color-sky-700);
+}
+.gds-btn-soft-sky:hover {
+  background-color: var(--gds-color-sky-200);
+  color: var(--gds-color-sky-800);
+}
+
+.gds-btn-soft-lavender {
+  background-color: var(--gds-color-lavender-100);
+  color: var(--gds-color-lavender-700);
+}
+.gds-btn-soft-lavender:hover {
+  background-color: var(--gds-color-lavender-200);
+  color: var(--gds-color-lavender-800);
+}
+
+.gds-btn-soft-butter {
+  background-color: var(--gds-color-butter-100);
+  color: #854D0E;
+}
+.gds-btn-soft-butter:hover {
+  background-color: var(--gds-color-butter-200);
+}
+
+/* Button Variants: Outline */
+.gds-btn-outline {
+  background-color: transparent;
+  color: var(--gds-color-slate-700);
+  border-color: var(--gds-color-slate-200);
+}
+.gds-btn-outline:hover {
+  background-color: var(--gds-color-slate-50);
+  border-color: var(--gds-color-slate-300);
+  color: var(--gds-color-slate-900);
+}
+
+/* Button Variants: Ghost */
+.gds-btn-ghost {
+  background-color: transparent;
+  color: var(--gds-color-slate-600);
+}
+.gds-btn-ghost:hover {
+  background-color: var(--gds-color-slate-100);
+  color: var(--gds-color-slate-900);
+}
+
+/* ==========================================================================
+   BADGE COMPONENT
+   ========================================================================== */
+
+.gds-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: var(--gds-radius-full);
+}
+.gds-badge-sky {
+  background-color: var(--gds-color-sky-100);
+  color: var(--gds-color-sky-700);
+}
+.gds-badge-lavender {
+  background-color: var(--gds-color-lavender-100);
+  color: var(--gds-color-lavender-700);
+}
+.gds-badge-butter {
+  background-color: var(--gds-color-butter-200);
+  color: #713F12;
+}
+.gds-badge-coral {
+  background-color: var(--gds-color-coral-100);
+  color: var(--gds-color-coral-700);
+}
+
+/* ==========================================================================
+   SELECT & INPUT COMPONENTS
+   ========================================================================== */
+
+.gds-select,
+.gds-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  font-family: var(--gds-font-sans);
+  font-size: 14px;
+  color: var(--gds-color-slate-900);
+  background-color: #FFFFFF;
+  border: 1px solid var(--gds-color-slate-200);
+  border-radius: var(--gds-radius-md);
+  transition: all var(--gds-transition-fast);
+  outline: none;
+}
+
+.gds-select:focus,
+.gds-input:focus {
+  border-color: var(--gds-color-sky-400);
+  box-shadow: 0 0 0 4px var(--gds-color-sky-100);
+}

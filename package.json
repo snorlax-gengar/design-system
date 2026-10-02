@@ -1,0 +1,74 @@
+{
+  "name": "gengarileo-design-system",
+  "version": "1.2.0",
+  "description": "Gengarileo Design System (GDS) - A warm, human-centered family edition design system and UI library.",
+  "author": "gengarileo",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/style.css",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css",
+    "./tokens": {
+      "types": "./dist/tokens/colors.d.ts",
+      "import": "./dist/tokens/colors.js"
+    },
+    "./tokens/tailwind-preset": "./dist/tokens/tailwind-preset.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "design-system",
+    "react",
+    "ui-kit",
+    "components",
+    "tailwind",
+    "gowun-dodum",
+    "design-tokens"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build:lib": "vite build --config vite.config.lib.ts",
+    "build:site": "tsc -b && vite build",
+    "build": "npm run build:lib && npm run build:site",
+    "prepack": "npm run build:lib",
+    "lint": "oxlint",
+    "preview": "vite preview --outDir dist-site"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "lucide-react": "^1.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "autoprefixer": "^10.6.1",
+    "oxlint": "^1.81.0",
+    "postcss": "^8.5.28",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0",
+    "vite-plugin-dts": "^5.1.1"
+  }
+}
